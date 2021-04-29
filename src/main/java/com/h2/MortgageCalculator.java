@@ -29,7 +29,7 @@ public class MortgageCalculator {
         int n = getNumberOfPayments();
 
         double M = P * (((r * Math.pow(1 + r, n))) / ((Math.pow((1 + r), n)) - 1));
-        this.monthlyPayment = M
+        //this.monthlyPayment = M
     }
 
     public String toString() {
