@@ -3,7 +3,7 @@ package com.h2;
 public class Utilities {
 
     public static long getLongValue(String in) {
-        long out = Long.MIN_VALUE;
+        long out;
         try {
             out = Long.parseLong(in);
         } catch (NumberFormatException e) {
@@ -13,7 +13,7 @@ public class Utilities {
     }
 
     public static int getIntValue(String in) {
-        int out = Integer.parseInt(in);
+        int out;
         try {
             out = Integer.parseInt(in);
         } catch (NumberFormatException e) {
@@ -23,7 +23,7 @@ public class Utilities {
     }
 
     public static float getFloatValue(String in) {
-        float out = Float.MIN_VALUE;
+        float out;
         try {
             out = Float.parseFloat(in);
         } catch (NumberFormatException e) {
