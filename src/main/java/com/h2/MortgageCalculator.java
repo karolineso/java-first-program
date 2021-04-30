@@ -1,8 +1,5 @@
 package com.h2;
-/**
- * Hello world!!!!
- *
- */
+
 import java.text.DecimalFormat;
 
 public class MortgageCalculator {
@@ -11,7 +8,7 @@ public class MortgageCalculator {
     private float annualRate;
     private double monthlyPayment;
 
-    public MortgageCalculator(long loanAmount, int termInYears, float annualRate){
+    public MortgageCalculator(long loanAmount, int termInYears, float annualRate) {
         this.loanAmount = loanAmount;
         this.termInYears = termInYears;
         this.annualRate = annualRate;
@@ -32,7 +29,7 @@ public class MortgageCalculator {
         int n = getNumberOfPayments();
 
         double M = P * (((r * Math.pow(1 + r, n))) / ((Math.pow((1 + r), n)) - 1));
-        //this.monthlyPayment = M
+        this.monthlyPayment = M;
     }
 
     public String toString() {
@@ -49,4 +46,5 @@ public class MortgageCalculator {
         calculator.calculateMonthlyPayment();
         System.out.println(calculator.toString());
     }
+
 }
