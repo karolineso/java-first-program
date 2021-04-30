@@ -28,7 +28,7 @@ public class Finance {
         return false;
     }
 
-    private static void executeCommands(String command, String[] arguments) {
+    private static void executeCommand(String command, String[] arguments) {
         switch (command) {
             case BEST_LOAN_RATES:
                 System.out.println("Finding best loan rates ...");
@@ -41,14 +41,13 @@ public class Finance {
             case MORTGAGE_CALCULATOR:
                 System.out.println("Finding your monthly payment ...");
                 MortgageCalculator.main(arguments);
-                return;
         }
     }
 
     public static void main(String[] args) {
         String command = args[0];
         if(!commandsToUsage.containsKey(command)) {
-            System.out.println(commandsToUsage.get(args[0]));
+            System.out.println(command + ": command not found");
             return;
         }
 
@@ -58,6 +57,6 @@ public class Finance {
             return;
         }
 
-        executeCommands(command, Arrays.copyOfRange(args, 1, args.length ));
+        executeCommand(command, Arrays.copyOfRange(args, 1, args.length ));
     }
 }
